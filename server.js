@@ -163,7 +163,6 @@ app.get('/unsubscribe', (req, res) => {
   <div class="container">
     <div class="header">
       <h1>Re:365 광고성 정보 메일 수신 거절 신청</h1>
-      <button class="close-btn" onclick="window.close()">&times;</button>
     </div>
     <div class="content" id="confirmContent">
       <p class="name">${name ? name + '님' : ''}</p>
@@ -171,13 +170,13 @@ app.get('/unsubscribe', (req, res) => {
       <p class="email">메일 주소 : <strong>${email ? email.replace(/(.{2})(.*)(@.*)/, '$1****$3') : ''}</strong></p>
       <div class="buttons">
         <button class="btn btn-primary" onclick="processUnsubscribe()">수신 거절</button>
-        <button class="btn btn-secondary" onclick="window.close()">닫기</button>
       </div>
     </div>
     <div class="result" id="resultContent">
       <div class="result-icon" id="resultIcon">✅</div>
       <p class="result-message" id="resultMessage">수신거부 처리가 완료되었습니다.</p>
       <p class="result-sub" id="resultSub">더 이상 광고성 메일을 받지 않습니다.</p>
+      <p style="margin-top: 20px; font-size: 13px; color: #9ca3af;">이 탭을 닫아주세요.</p>
     </div>
     <div class="notice">
       · 광고성 정보 메일 수신을 거절하시면, Re:365에서 제공하는 행사 및 할인 정보가 제공되지 않습니다.
