@@ -165,9 +165,9 @@ app.get('/unsubscribe', (req, res) => {
       <h1>Re:365 광고성 정보 메일 수신 거절 신청</h1>
     </div>
     <div class="content" id="confirmContent">
-      <p class="name">${name ? name + '님' : ''}</p>
+      <p class="name">고객님</p>
       <p class="question"><strong>Re:365 광고성 정보 메일</strong> 수신을 거절 하시겠습니까?</p>
-      <p class="email">메일 주소 : <strong>${email ? email.replace(/(.{2})(.*)(@.*)/, '$1****$3') : ''}</strong></p>
+      <p class="email">메일 주소 : <strong>${email && !email.includes('$') ? email.replace(/(.{2})(.*)(@.*)/, '$1****$3') : '(이메일 정보 없음)'}</strong></p>
       <div class="buttons">
         <button class="btn btn-primary" onclick="processUnsubscribe()">수신 거절</button>
       </div>
